@@ -5,14 +5,7 @@
   publish = "dist"
 
 [functions]
-  node_bundler = "esbuild"
-
-  [plugins.inputs.postBuild]
-    enable = true
-  
-  [plugins.inputs]
-    enable = false
-    
+  node_bundler = "esbuild"  
 [[redirects]]
   from = "/api/*" # simplify all calls to serverless functions
   to = "/.netlify/functions/:splat" # all function calls will go to this path
