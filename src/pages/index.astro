@@ -5,11 +5,11 @@ import Layout from '../components/Layout.astro';
 <Layout title="Café con Radio | Música y Recuerdos">
 	<main>
 		<h1>Bienvenidos a <span class="text-gradient">Café con Radio</span></h1>
-		
+
 		<section class="intro">
 			<p>
-				Esta es una cápsula del tiempo musical. Aquí compartimos las canciones que han marcado nuestras vidas, 
-				desde los clásicos de <strong>Adamo</strong> y <strong>Albert Hammond</strong>, hasta la fuerza de 
+				Esta es una cápsula del tiempo musical. Aquí compartimos las canciones que han marcado nuestras vidas,
+				desde los clásicos de <strong>Adamo</strong> y <strong>Albert Hammond</strong>, hasta la fuerza de
 				<strong>Mercedes Sosa</strong> y <strong>Silvio Rodríguez</strong>.
 			</p>
 		</section>
@@ -18,11 +18,11 @@ import Layout from '../components/Layout.astro';
 			<h2>Nuestra Identidad Musical</h2>
 			<ul>
 				<li>
-					<strong>Clásicos Inolvidables:</strong> Disfruta de la magia de <strong>Queen</strong>, <strong>Soda Stereo</strong> 
+					<strong>Clásicos Inolvidables:</strong> Disfruta de la magia de <strong>Queen</strong>, <strong>Soda Stereo</strong>
 					y el pop eterno de <strong>a-Ha</strong>.
 				</li>
 				<li>
-					<strong>Momentos de siempre:</strong> La compañía perfecta con las voces de <strong>Joan Baez</strong>, 
+					<strong>Momentos de siempre:</strong> La compañía perfecta con las voces de <strong>Joan Baez</strong>,
 					<strong>Bob Dylan</strong> y la armonía de los <strong>Bee Gees</strong>.
 				</li>
 			</ul>
@@ -40,7 +40,6 @@ import Layout from '../components/Layout.astro';
 		padding: 1.5rem;
 		max-width: 80ch;
 		line-height: 1.6;
-		color: #fff;
 	}
 	h1 {
 		font-size: 3rem;
@@ -49,27 +48,24 @@ import Layout from '../components/Layout.astro';
 		text-align: center;
 	}
 	.text-gradient {
-		background-image: linear-gradient(45deg, #f39c12, #d35400);
+		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.intro {
-		font-size: 1.2rem;
+	.intro, .recuerdos {
+		line-height: 1.8;
 		margin: 2rem 0;
-		text-align: center;
-	}
-	.recuerdos {
-		background: #23262d;
+		background-color: white;
 		padding: 1.5rem;
-		border-radius: 12px;
-		border: 1px solid #444;
+		border-radius: 8px;
+		color: #444;
 	}
 	.instrucciones {
-		margin-top: 2rem;
-		font-style: italic;
 		text-align: center;
-		color: #ccc;
+		font-style: italic;
+		color: #fff;
+		margin-top: 2rem;
 	}
 </style>
