@@ -1,17 +1,41 @@
-$("#lunaradio_id").lunaradio({
-  userinterface: "big",
-  coverimage: "https://cafe-con-radio.netlify.app/cafe_con_radio.png",
-  backgroundcolor: "#fff8f0",
-  fontcolor: "#333333",
-  hightlightcolor: "#ce5a37",
-  fontfamily: "Saira Condensed, sans-serif",
-  basefontcolor: "#ffffff",
-  startvolume: "60",
-  visualizer: "true",
-  radioname: "Café con Radio",
-  streamurl: "https://stream.zeno.fm/9kt8dngtou8tv",
-  streamtype: "shoutcast2",
-  idshoutcast: "1",
-  shoutcastpath: "/stream",
-  metadatainterval: "5000",
-});
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <script is:inline src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <slot />
+    <div id="lunaradio_id" style="width:100%; height:400px!important; min-height:600px; margin-top:20px;"></div>
+    <script is:inline src="/js/lunaradio.js"></script>
+    <script is:inline>
+      $(document).ready(function() {
+        $("#lunaradio_id").lunaradio({
+          userinterface: "big",
+          logo: "/cafe_con_radio.png",
+          backgroundcolor: "#fff8f0",
+          fontcolor: "#333333",
+          hightlightcolor: "#ce5a37",
+          fontfamily: "Saira Condensed, sans-serif",
+          basefontcolor: "#ffffff",
+          startvolume: "60",
+          visualizer: "true",
+          radioname: "Café con Radio",
+          streamurl: "https://stream.zeno.fm/9kt8dngtou8tv",
+          streamtype: "shoutcast2",
+          idshoutcast: "1",
+          shoutcastpath: "/stream",
+          metadatainterval: "5000",
+        });
+      });
+    </script>
+  </body>
+</html>
